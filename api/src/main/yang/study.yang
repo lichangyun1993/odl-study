@@ -1,0 +1,33 @@
+module study {
+    yang-version 1;
+    namespace "urn:opendaylight:params:xml:ns:yang:study";
+    prefix "study";
+
+    revision "2015-01-05" {
+        description "Initial revision of study model";
+    }
+    container data-model {
+    	 leaf name {
+    		type string;
+    	}
+    }
+    
+    rpc greet {
+        input {
+            leaf lf-input {
+                type string;
+            }
+        }
+        output {
+            leaf lf-output {
+                type string;
+            }
+        }
+    }
+    
+    notification greet-message {
+    	 leaf message {
+    	 	type string;
+    	 }
+    }
+}
